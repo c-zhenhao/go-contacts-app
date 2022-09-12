@@ -18,8 +18,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
 
   const handlePageChange = (event, value) => {
-    console.log(value);
-    console.log("pagination clicked");
+    console.log("pagination clicked. page:", value);
     setPage(value);
   };
 

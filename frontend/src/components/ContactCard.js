@@ -1,13 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-import {
-  Avatar,
-  Grid,
-  ListItem,
-  IconButton,
-  useEventCallback,
-} from "@mui/material";
+import { Avatar, Grid, ListItem, IconButton } from "@mui/material";
 
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -62,6 +56,10 @@ const ContactCard = (props) => {
                 event.stopPropagation();
 
                 console.log("delete clicked");
+                if (window.confirm("are you sure you want to delete?")) {
+                  // call API to delete
+                  console.log("delete api called");
+                }
                 navigate("/");
               }}
             >
