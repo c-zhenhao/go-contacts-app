@@ -68,7 +68,7 @@ const Home = (props) => {
       console.log(`home.js > running cleanup function`);
       controller.abort();
     };
-  }, [page]);
+  }, [page, props.toggle]);
 
   return (
     <>
@@ -78,7 +78,6 @@ const Home = (props) => {
         </Box>
 
         <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
-          <Typography>Page no: {page}</Typography>
           <Pagination
             count={totalPages}
             size="large"

@@ -18,7 +18,7 @@ function App() {
     event.preventDefault();
     console.log(`submitted`);
     setToggle(!toggle);
-    setSearch("");
+    // setSearch("");
   };
   const handleSearchChange = (event) => {
     console.log(event.target.value);
