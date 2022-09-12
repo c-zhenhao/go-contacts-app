@@ -8,24 +8,27 @@
 - Backend: Golang + web-framework serving RESTful API: Gin-gonic
 - Database: MongoDB
 
-
 ## Demo
 
 - Paginated contacts list
-https://user-images.githubusercontent.com/16322250/189772771-b10d9059-f86f-4cd9-97c9-c196942eded5.mov
+  <video src="https://user-images.githubusercontent.com/16322250/189772771-b10d9059-f86f-4cd9-97c9-c196942eded5.mov" controls="controls" style="max-width: 730px;">
+  </video>
 
 - Create Contact and Searching for it
-https://user-images.githubusercontent.com/16322250/189773217-1dd32541-b68b-4e40-8e96-f5d64685eb99.mov
+  <video src="https://user-images.githubusercontent.com/16322250/189773217-1dd32541-b68b-4e40-8e96-f5d64685eb99.mov" controls="controls" style="max-width: 730px;">
+  </video>
 
 - Search returns multiple matching documents (name or number)
-https://user-images.githubusercontent.com/16322250/189773181-7f70d894-069b-4d29-8a8d-7f570567d25b.mov
+  <video src="https://user-images.githubusercontent.com/16322250/189773181-7f70d894-069b-4d29-8a8d-7f570567d25b.mov" controls="controls" style="max-width: 730px;">
+  </video>
 
 - Update Contact
-https://user-images.githubusercontent.com/16322250/189773496-9ea7392b-f060-40d0-810c-dc43e257a28a.mov
+  <video src="https://user-images.githubusercontent.com/16322250/189773496-9ea7392b-f060-40d0-810c-dc43e257a28a.mov" controls="controls" style="max-width: 730px;">
+  </video>
 
 - Delete Contact
-https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-bdce-fa472b93e785.mov
-
+  <video src="https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-bdce-fa472b93e785.mov" controls="controls" style="max-width: 730px;">
+  </video>
 
 ## APIs developed
 
@@ -37,8 +40,7 @@ https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-
 | PATCH  | /contact/:contactId | Update single contact data   |
 | DELETE | /contact/:contactId | Delete single contact data   |
 
-### TBD Swagger Documentation - WIP ###
-
+### TBD Swagger Documentation - WIP
 
 ## Difficulties Encountered
 
@@ -48,10 +50,10 @@ https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-
 
 - HTML/CSS --> Have not had much practise for awhile now, so it took some time to get back into figuring out how to align/center things. I tend to have an overreliance on `display: flex` as i think it fixes all centering problems (provided i know what's happening...), but it seems to serve its purposes so far, when used in conjunction with Grids to create the right layout and even responsive when using breakpoints correctly.
 
-
 ## Things to work on
 
 - Backend:
+
   - task: swagger to document API
   - jwt authentication for account creation, and API security
     - task on looking into auditing and logging requests for security and block anomalous requests (use ML if necssary)
@@ -71,26 +73,29 @@ https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-
   - work on CSS, fix alignment issues and add dialogs/modals (instead of coding with window/alerts/confirms)
   - Look into unit testing (?jest)
 
-
 ## Resources
 
 - Gin-gonic cors: https://pkg.go.dev/github.com/gin-contrib/cors#section-readme
 
 - WTF are pointers and how to use them in APIs
+
   - https://willnorris.com/2014/05/go-rest-apis-and-pointers/
   - https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back
 
 - WTF is omitempty?
+
   - https://www.sohamkamani.com/golang/omitempty/
   - https://stackoverflow.com/questions/47158987/how-to-update-mongodb-fields-with-omitempty-flag-in-golang-structure
   - https://www.golang-book.com/books/intro/8
   - https://www.digitalocean.com/community/conceptual_articles/understanding-pointers-in-go
 
 - Pagination resources:
+
   - https://github.com/icza/minquery (kind of inactive)
   - https://github.com/gobeam/mongo-go-pagination (kind of inactive)
 
 - Swagger resources:
+
   - https://santoshk.dev/posts/2022/how-to-integrate-swagger-ui-in-go-backend-gin-edition/
   - https://blog.logrocket.com/documenting-go-web-apis-with-swag/
   - https://github.com/swaggo/swag
@@ -101,7 +106,7 @@ https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-
   - Gin gonic GO JWT https://www.youtube.com/watch?v=Cr3BiwGN2Tg&list=PL5dTjWUk_cPY7Q2VTnMbbl8n-H4YDI5wF&index=8
   - Gin-gonic Cloudinary https://dev.to/hackmamba/robust-media-upload-with-golang-and-cloudinary-gin-gonic-version-54ii
 
-
 ## Wireframes (intended design - TBD (maybe))
+
 ![image](https://user-images.githubusercontent.com/16322250/189774221-1de561b9-44c9-46c6-a3d7-ffe4a4c91813.png)
 ![image](https://user-images.githubusercontent.com/16322250/189774240-a68012b3-cdf5-48ac-b9dd-a2afd62dfc19.png)
