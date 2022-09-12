@@ -4,11 +4,15 @@ import (
 	"go-contacts-app/configs"
 	"go-contacts-app/routes"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
 	router := gin.Default()
+
+	// cors
+	router.Use(cors.Default())
 
 	// test endpoint
 	router.GET("/", func(c *gin.Context) {

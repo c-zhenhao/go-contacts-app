@@ -7,14 +7,41 @@ import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const ContactCard = (props) => {
+  console.log(props);
   const navigate = useNavigate();
+
+  const deleteData = async () => {
+    const url = `http://localhost:8000/contact/${props.id}`;
+    const config = {
+      method: "DELETE",
+    };
+
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
+    try {
+      const response = await fetch(url, config, { signal });
+
+      if (response.status !== 200) {
+        throw new Error("couldn't delete data");
+      }
+      const data = await response.json();
+      console.log(data.data);
+
+      if (response.status === 200) {
+        window.location.reload();
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
       <ListItem
         button
         onClick={() => {
-          navigate(`/view`);
+          navigate(`/view/${props.id}`);
         }}
       >
         <Grid
@@ -26,10 +53,10 @@ const ContactCard = (props) => {
             <Avatar />
           </Grid>
           <Grid item xs={5}>
-            I put in a really really long name
+            {props.name}
           </Grid>
           <Grid item xs={4}>
-            12345678
+            {props.phone}
           </Grid>
 
           <Grid
@@ -44,7 +71,7 @@ const ContactCard = (props) => {
                 event.stopPropagation();
 
                 console.log("edit clicked");
-                navigate("/edit");
+                navigate(`/edit/${props.id}`);
               }}
             >
               <ModeEditIcon fontSize="inherit" />
@@ -57,10 +84,9 @@ const ContactCard = (props) => {
 
                 console.log("delete clicked");
                 if (window.confirm("are you sure you want to delete?")) {
-                  // call API to delete
                   console.log("delete api called");
+                  deleteData();
                 }
-                navigate("/");
               }}
             >
               <DeleteIcon fontSize="inherit" />

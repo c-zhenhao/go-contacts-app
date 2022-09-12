@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate, Link as RouterLink } from "react-router-dom";
 
 import {
@@ -22,16 +22,57 @@ import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined
 const Create = () => {
   const navigate = useNavigate();
 
+  const [name, setName] = useState();
+  const [phone, setPhone] = useState();
+
+  const handleNameChange = (event) => {
+    // console.log(event.target.value);
+    setName(event.target.value);
+  };
+  const handlePhoneChange = (event) => {
+    // console.log(event.target.value);
+    setPhone(event.target.value);
+  };
+
+  const postData = async () => {
+    const url = `http://localhost:8000/contact`;
+    const config = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name: name, phone: phone }),
+    };
+
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
+    try {
+      const response = await fetch(url, config, { signal });
+
+      if (response.status !== 200) {
+        throw new Error("couldn't post data");
+      }
+      const data = await response.json();
+      console.log(data.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const handleSaveClick = () => {
     console.log("save clicked");
+    postData();
     navigate("/");
   };
 
   return (
     <>
       <Container maxWidth="xl">
-        <Box mt={2}>
-          <Typography>This is create contact page</Typography>
+        <Box mt={3} mb={2}>
+          <Typography variant="h5" fontWeight="bold">
+            Create Contact
+          </Typography>
         </Box>
 
         <Grid container sx={{ display: "flex" }} spacing={1}>
@@ -106,6 +147,7 @@ const Create = () => {
                       margin="dense"
                       fullWidth
                       sx={{ mr: 4, fontColor: "#909092" }}
+                      onChange={handleNameChange}
                     />
                   </Box>
                   <Box sx={{ mt: 3, display: "flex" }}>
@@ -121,6 +163,7 @@ const Create = () => {
                       fullWidth
                       sx={{ mr: 4 }}
                       inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
+                      onChange={handlePhoneChange}
                     />
                   </Box>
                 </Box>
