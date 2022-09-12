@@ -1,6 +1,7 @@
 ## frontend folder
 
 - This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- to run frontend, `cd frontend` and `yarn` to install dependencies
 - `yarn start`
 
 <!-- # Getting Started with Create React App
