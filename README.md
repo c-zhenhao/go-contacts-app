@@ -20,7 +20,11 @@
 
 ## Difficulties Encountered
 
-- Learning Golang was challenging as a SWE bootcamp-er, with no formal training on data structures and
+- Learning Golang was challenging as a SWE bootcamp-er, with no formal training on data structures, how mmemory works (pointers, addresses), it required a bit more thinking to statically type variables. However, it was an excellent learning experience and hope that it will help me become a better software engineer.
+
+- React --> it took me some adjusting to use Javascript after spending so much time in Python (for leetcode practice) and then Golang, but it was overcome relatively quickly compared to Golang since it was rather "unstructured" compared to latter.
+
+- CSS --> Have not had much practise for awhile now, so it took some time to get back into figuring out how to align/center things. I had an overreliance on display: flex, but it seems to serve its purposes so far, when used in conjunction with Grids
 
 ## Things to work on
 
@@ -29,12 +33,14 @@
   - jwt authentication for account creation, and API security
   - add more fields to contact model
   - add validation to controller
+  - task on looking into auditing and logging requests for security and block anomalous requests (use ML if necssary)
+    - Elastic Kibana?
 
 - Frontend:
 
   - add validation in frontend
   - add login/register page
-  - work on CSS
+  - work on CSS, fix alignment issues and add dialogs/modals (instead of coding with window/alerts/confirms)
 
 - Look into unit testing
 
