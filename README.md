@@ -1,6 +1,6 @@
 # Full-stack contacts app
 
-- Contacts Book is a full-stack contacts app that allows you to add, edit and delete contacts. It also allows you to search for contacts by either name or phone number. It was a project to learn Golang and web-frameworks like Gin-gonic.
+- Contacts Book is a full-stack contacts app that allows you to add, edit and delete contacts. It also allows you to search for contacts by either name or phone number (though the search isn't as smart as Google's... speaking of Google, the design of it is inspired by Google's very own contact app). It was a project to learn Golang and web-frameworks like Gin-gonic.
 
 - I ultimately decided on Gin-gonic due to the availability of resources and simplicity of the guides. I also considered Fiber, which was known for it being similar to Express.js, but decided against it due to lack of familarity with the language. Also looked into Echo and Gorilla/Mux, but resources were limited and the latter seems to be more of router/library rather than a framework.
 
@@ -73,3 +73,5 @@
   - GraphQL with Golang: https://dev.to/hackmamba/create-a-graphql-powered-project-management-endpoint-in-golang-and-mongodb-18a
   - Gin gonic GO JWT https://www.youtube.com/watch?v=Cr3BiwGN2Tg&list=PL5dTjWUk_cPY7Q2VTnMbbl8n-H4YDI5wF&index=8
   - Gin-gonic Cloudinary https://dev.to/hackmamba/robust-media-upload-with-golang-and-cloudinary-gin-gonic-version-54ii
+
+## Wireframes (intended design - TBD (maybe))
