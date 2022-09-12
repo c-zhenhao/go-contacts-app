@@ -31,13 +31,19 @@
 - Backend:
 
   - jwt authentication for account creation, and API security
+    - task on looking into auditing and logging requests for security and block anomalous requests (use ML if necssary)
+    - Elastic Kibana?
+  -
   - add more fields to contact model
   - add validation to controller
-  - task on looking into auditing and logging requests for security and block anomalous requests (use ML if necssary)
-    - Elastic Kibana?
+  - look into implementing cloudinary for image upload
 
 - Frontend:
 
+  - BUGS:
+    - when searching for a string while on a page that is not 1, the results are not correct as the page retained the previous page number.
+      - to fix by resetting page number to 1 when search is triggered -- however that will require refactoring the code where the state is evalated to the parent component or possibly context/redux
+  - refactor haphazard code (e.g. move repeated code (e.g. fetching data) to services.js)
   - add validation in frontend
   - add login/register page
   - work on CSS, fix alignment issues and add dialogs/modals (instead of coding with window/alerts/confirms)
@@ -45,3 +51,25 @@
 - Look into unit testing
 
 ## Resources
+
+- Gin-gonic cors: https://pkg.go.dev/github.com/gin-contrib/cors#section-readme
+
+- WTF are pointers and how to use them in APIs
+
+  - https://willnorris.com/2014/05/go-rest-apis-and-pointers/
+
+- WTF is omitempty?
+
+  - https://www.sohamkamani.com/golang/omitempty/
+  - https://stackoverflow.com/questions/47158987/how-to-update-mongodb-fields-with-omitempty-flag-in-golang-structure
+
+- Pagination resources:
+
+  - https://github.com/icza/minquery (kind of inactive)
+  - https://github.com/gobeam/mongo-go-pagination (kind of inactive)
+
+- More Golang project guides which I intend to follow:
+  - A few topics: https://codevoweb.com/golang/
+  - GraphQL with Golang: https://dev.to/hackmamba/create-a-graphql-powered-project-management-endpoint-in-golang-and-mongodb-18a
+  - Gin gonic GO JWT https://www.youtube.com/watch?v=Cr3BiwGN2Tg&list=PL5dTjWUk_cPY7Q2VTnMbbl8n-H4YDI5wF&index=8
+  - Gin-gonic Cloudinary https://dev.to/hackmamba/robust-media-upload-with-golang-and-cloudinary-gin-gonic-version-54ii
