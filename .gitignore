@@ -156,3 +156,43 @@ Temporary Items
 .apdisk
 
 #sauce: https://github.com/github/gitignore/blob/main/Global/macOS.gitignore
+
+# more stuff to ignore
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Node/npm #
+##############
+# It is highly recommended you commit the generated package lock to source control: this will allow anyone else on your team, your deployments, your CI/continuous integration, and anyone else who runs npm install in your package source to get the exact same dependency tree that you were developing on. Additionally, the diffs from these changes are human-readable and will inform you of any changes npm has made to your node_modules, so you can notice if any transitive dependencies were updated, hoisted, etc.
+# https://docs.npmjs.com/files/package-locks#using-locked-packages
+# package-lock.json
+node_modules
+
+# Ignore yarn files
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# vs code stuff
+.idea/
+.vscode/
