@@ -15,21 +15,16 @@ import {
 } from "@mui/material";
 
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import DeleteIcon from "@mui/icons-material/Delete";
-import ModeEditIcon from "@mui/icons-material/ModeEdit";
+import DoneOutlinedIcon from "@mui/icons-material/DoneOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
 const Create = () => {
   const navigate = useNavigate();
 
-  const handleDeleteClick = () => {
-    console.log("delete clicked");
-    if (window.confirm("are you sure you want to delete?")) {
-      // call API to delete
-      console.log("delete api called");
-      navigate("/");
-    }
+  const handleSaveClick = () => {
+    console.log("save clicked");
+    navigate("/");
   };
 
   return (
@@ -68,10 +63,9 @@ const Create = () => {
               variant="contained"
               color="primary"
               sx={{ minWidth: "110px" }}
-              startIcon={<ModeEditIcon />}
-              component={RouterLink}
-              to={"/"}
-              disabled={true}
+              startIcon={<DoneOutlinedIcon />}
+              onClick={handleSaveClick}
+              disabled={false}
             >
               Save
             </Button>

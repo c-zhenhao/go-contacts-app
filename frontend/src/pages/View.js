@@ -34,7 +34,7 @@ const View = () => {
     <>
       <Container>
         <Box mt={2}>
-          <Typography>This is View page</Typography>
+          <Typography>This is view contact page</Typography>
         </Box>
 
         <Grid container sx={{ display: "flex" }} spacing={1}>
