@@ -35,13 +35,18 @@ const Create = () => {
   };
 
   const postData = async () => {
+    // capitalize first letter
+    const capitalize = name.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>
+      letter.toUpperCase()
+    );
+
     const url = `http://localhost:8000/contact`;
     const config = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name: name, phone: phone }),
+      body: JSON.stringify({ name: capitalize, phone: phone }),
     };
 
     const abortController = new AbortController();

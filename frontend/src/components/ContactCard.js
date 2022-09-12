@@ -7,7 +7,7 @@ import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const ContactCard = (props) => {
-  console.log(props);
+  // console.log(props);
   const navigate = useNavigate();
 
   const deleteData = async () => {
@@ -41,7 +41,7 @@ const ContactCard = (props) => {
       <ListItem
         button
         onClick={() => {
-          navigate(`/view/${props.id}`);
+          navigate(`/view/${props?.id}`);
         }}
       >
         <Grid
@@ -50,13 +50,15 @@ const ContactCard = (props) => {
           sx={{ display: "flex", alignItems: "center" }}
         >
           <Grid item xs={1} sx={{ ml: 1 }}>
-            <Avatar />
+            <Avatar
+              src={`https://ui-avatars.com/api/?name=${props?.name[0]}&length=1&background=random&size=150`}
+            />
           </Grid>
           <Grid item xs={5}>
-            {props.name}
+            {props?.name}
           </Grid>
           <Grid item xs={4}>
-            {props.phone}
+            {props?.phone}
           </Grid>
 
           <Grid
@@ -71,7 +73,7 @@ const ContactCard = (props) => {
                 event.stopPropagation();
 
                 console.log("edit clicked");
-                navigate(`/edit/${props.id}`);
+                navigate(`/edit/${props?.id}`);
               }}
             >
               <ModeEditIcon fontSize="inherit" />

@@ -59,7 +59,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CssBaseline />
@@ -91,15 +91,19 @@ export default function SearchAppBar() {
             </Typography>
           </Stack>
 
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
+          <form onSubmit={props.handleSubmit}>
+            <Search>
+              <SearchIconWrapper>
+                <SearchIcon />
+              </SearchIconWrapper>
+              <StyledInputBase
+                placeholder="Search…"
+                inputProps={{ "aria-label": "search" }}
+                onChange={props.handleSearchChange}
+                value={props.search}
+              />
+            </Search>
+          </form>
 
           <Button
             variant="outlined"

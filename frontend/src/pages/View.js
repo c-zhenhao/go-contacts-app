@@ -113,7 +113,10 @@ const View = () => {
                 xs={3}
                 sx={{ display: "flex", justifyContent: "center" }}
               >
-                <Avatar sx={{ width: 150, height: 150 }} />
+                <Avatar
+                  sx={{ width: 150, height: 150 }}
+                  src={`https://ui-avatars.com/api/?name=${contact?.name[0]}&length=1&background=random&size=150`}
+                />
               </Grid>
 
               <Grid item xs={6} sx={{ display: "flex", alignItems: "center" }}>

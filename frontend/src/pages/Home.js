@@ -15,7 +15,7 @@ import {
   Typography,
 } from "@mui/material";
 
-const Home = () => {
+const Home = (props) => {
   const [contacts, setContacts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   // const [error, setError] = useState(null);
@@ -55,7 +55,7 @@ const Home = () => {
   useEffect(() => {
     console.log(`home.js mounted or rendered`);
 
-    const url = `http://localhost:8000/contact?sort=asc&limit=10&page=${page}`;
+    let url = `http://localhost:8000/contact?sort=asc&limit=10&page=${page}&search=${props.search}`;
     const config = {
       method: "GET",
     };
@@ -108,7 +108,7 @@ const Home = () => {
                     </Grid>
                   </ListItem>
 
-                  <Divider />
+                  <Divider sx={{ mb: 2 }} />
 
                   {isLoading ? (
                     <Container
