@@ -40,13 +40,14 @@
 
 - Backend:
 
+  - task: swagger to document API
   - jwt authentication for account creation, and API security
     - task on looking into auditing and logging requests for security and block anomalous requests (use ML if necssary)
     - Elastic Kibana?
-  -
   - add more fields to contact model
   - add validation to controller
   - look into implementing cloudinary for image upload
+  - look into unit testing (testify)
 
 - Frontend:
 
@@ -80,6 +81,12 @@
 
   - https://github.com/icza/minquery (kind of inactive)
   - https://github.com/gobeam/mongo-go-pagination (kind of inactive)
+
+- Swagger resources:
+
+  - https://santoshk.dev/posts/2022/how-to-integrate-swagger-ui-in-go-backend-gin-edition/
+  - https://blog.logrocket.com/documenting-go-web-apis-with-swag/
+  - https://github.com/swaggo/swag
 
 - More Golang project guides which I intend to follow:
   - A few topics: https://codevoweb.com/golang/
