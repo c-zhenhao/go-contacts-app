@@ -69,10 +69,35 @@ const View = () => {
     };
   }, []);
 
+  const deleteData = async () => {
+    const url = `http://localhost:8000/contact/${params.contactId}`;
+    const config = {
+      method: "DELETE",
+    };
+
+    const abortController = new AbortController();
+    const signal = abortController.signal;
+
+    try {
+      const response = await fetch(url, config, { signal });
+
+      if (response.status !== 200) {
+        throw new Error("couldn't delete data");
+      }
+      const data = await response.json();
+      console.log(data.data);
+
+      if (response.status === 200) {
+        navigate("/");
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
   const handleDeleteClick = () => {
     console.log("delete clicked");
     if (window.confirm("are you sure you want to delete?")) {
-      // call API to delete
+      deleteData();
       console.log("delete api called");
       navigate("/");
     }

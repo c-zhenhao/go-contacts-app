@@ -1,7 +1,7 @@
 import "./App.css";
 
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import AppBar from "./components/AppBar";
 
@@ -11,6 +11,8 @@ import View from "./pages/View";
 import Edit from "./pages/Edit";
 
 function App() {
+  const navigate = useNavigate();
+
   const [search, setSearch] = useState("");
   const [toggle, setToggle] = useState(true);
 
@@ -18,7 +20,7 @@ function App() {
     event.preventDefault();
     console.log(`submitted`);
     setToggle(!toggle);
-    // setSearch("");
+    navigate("/");
   };
   const handleSearchChange = (event) => {
     console.log(event.target.value);
