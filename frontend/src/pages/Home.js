@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <>
-      <Container>
+      <Container maxWidth="xl">
         <Box mt={2}>
           <Typography>This is home page</Typography>
         </Box>

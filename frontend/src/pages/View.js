@@ -32,7 +32,7 @@ const View = () => {
 
   return (
     <>
-      <Container>
+      <Container maxWidth="xl">
         <Box mt={2}>
           <Typography>This is view contact page</Typography>
         </Box>

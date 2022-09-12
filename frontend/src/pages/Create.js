@@ -29,7 +29,7 @@ const Create = () => {
 
   return (
     <>
-      <Container>
+      <Container maxWidth="xl">
         <Box mt={2}>
           <Typography>This is create contact page</Typography>
         </Box>
