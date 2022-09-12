@@ -18,6 +18,16 @@
 
 - Delete Contact
 
+## APIs developed
+
+| Method | Address             | Description                  |
+| ------ | ------------------- | ---------------------------- |
+| POST   | /contact            | Create contact               |
+| GET    | /contact/:contactId | Retrieve single contact data |
+| GET    | /contact            | Retrieve all contact data    |
+| PATCH  | /contact/:contactId | Update single contact data   |
+| DELETE | /contact/:contactId | Delete single contact data   |
+
 ## Difficulties Encountered
 
 - Learning Golang was challenging as a SWE bootcamp-er, with no formal training on data structures, how mmemory works (pointers, addresses), it required a bit more thinking to statically type variables. However, it was an excellent learning experience and hope that it will help me become a better software engineer.
