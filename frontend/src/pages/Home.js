@@ -21,6 +21,7 @@ const Home = (props) => {
   // const [error, setError] = useState(null);
   const [totalPages, setTotalPages] = useState();
   const [page, setPage] = useState(1);
+  const [countContacts, setCountContacts] = useState();
 
   const handlePageChange = (event, value) => {
     console.log("pagination clicked. page:", value);
@@ -43,6 +44,7 @@ const Home = (props) => {
       console.log(data.data.data);
 
       setTotalPages(data.data.totalPages);
+      setCountContacts(data.data.totalDocs);
       setContacts(data.data.data);
     } catch (err) {
       console.log(err);
@@ -77,7 +79,16 @@ const Home = (props) => {
           <Typography></Typography>
         </Box>
 
-        <Box sx={{ display: "flex", justifyContent: "flex-end", mb: 2 }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between", mb: 2 }}>
+          <Typography
+            variant="h7"
+            sx={{ color: "#909092", display: "flex", mt: 2 }}
+          >
+            Contacts:{" ("}
+            {countContacts}
+            {")"}
+          </Typography>
+
           <Pagination
             count={totalPages}
             size="large"
