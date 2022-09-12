@@ -24,7 +24,7 @@
 
 - React --> it took me some adjusting to use Javascript after spending so much time in Python (for leetcode practice) and then Golang, but it was overcome relatively quickly compared to Golang since it was rather "unstructured" compared to latter.
 
-- CSS --> Have not had much practise for awhile now, so it took some time to get back into figuring out how to align/center things. I had an overreliance on display: flex, but it seems to serve its purposes so far, when used in conjunction with Grids
+- CSS --> Have not had much practise for awhile now, so it took some time to get back into figuring out how to align/center things. I tend to have an overreliance on display: flex as i think it fixes all centering problems (provided i know what's happening...), but it seems to serve its purposes so far, when used in conjunction with Grids to create the right layout and even responsive when using breakpoints correctly.
 
 ## Things to work on
 
