@@ -26,8 +26,8 @@ const View = () => {
     if (window.confirm("are you sure you want to delete?")) {
       // call API to delete
       console.log("delete api called");
+      navigate("/");
     }
-    navigate("/");
   };
 
   return (
@@ -101,7 +101,7 @@ const View = () => {
                   justifyContent: "center",
                 }}
               >
-                <Typography sx={{ fontWeight: "bold" }}>
+                <Typography sx={{ fontWeight: "bold", mb: 1 }}>
                   Contact Details
                 </Typography>
 
