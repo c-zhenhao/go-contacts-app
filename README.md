@@ -11,23 +11,23 @@
 ## Demo
 
 - Paginated contacts list
-  <video src="https://user-images.githubusercontent.com/16322250/189772771-b10d9059-f86f-4cd9-97c9-c196942eded5.mov" controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189772771-b10d9059-f86f-4cd9-97c9-c196942eded5.mov" autoplay loop controls="controls" style="max-width: 730px;">
   </video>
 
 - Create Contact and Searching for it
-  <video src="https://user-images.githubusercontent.com/16322250/189773217-1dd32541-b68b-4e40-8e96-f5d64685eb99.mov" controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189773217-1dd32541-b68b-4e40-8e96-f5d64685eb99.mov" autoplay loop controls="controls" style="max-width: 730px;">
   </video>
 
 - Search returns multiple matching documents (name or number)
-  <video src="https://user-images.githubusercontent.com/16322250/189773181-7f70d894-069b-4d29-8a8d-7f570567d25b.mov" controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189773181-7f70d894-069b-4d29-8a8d-7f570567d25b.mov" autoplay loop controls="controls" style="max-width: 730px;">
   </video>
 
 - Update Contact
-  <video src="https://user-images.githubusercontent.com/16322250/189773496-9ea7392b-f060-40d0-810c-dc43e257a28a.mov" controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189773496-9ea7392b-f060-40d0-810c-dc43e257a28a.mov" autoplay loop controls="controls" style="max-width: 730px;">
   </video>
 
 - Delete Contact
-  <video src="https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-bdce-fa472b93e785.mov" controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-bdce-fa472b93e785.mov" autoplay loop controls="controls" style="max-width: 730px;">
   </video>
 
 ## APIs developed
