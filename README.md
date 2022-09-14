@@ -109,11 +109,15 @@ User API TBD
 - Pagination resources:
   - https://github.com/icza/minquery (kind of inactive)
   - https://github.com/gobeam/mongo-go-pagination (kind of inactive)
+  - https://www.youtube.com/watch?v=yObwJgoXR7o&t=994s
 
-- Swagger resources:
+- Swagger resources to follow:
   - https://santoshk.dev/posts/2022/how-to-integrate-swagger-ui-in-go-backend-gin-edition/
   - https://blog.logrocket.com/documenting-go-web-apis-with-swag/
   - https://github.com/swaggo/swag
+
+- Potentially API monitoring stuff to follow (will edit):
+  - https://www.youtube.com/watch?v=pP2DKCKR4CQ
 
 - More Golang project guides which I intend to follow:
   - A few topics: https://codevoweb.com/golang/
