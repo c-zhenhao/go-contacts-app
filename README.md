@@ -44,7 +44,8 @@ Contacts API
 | DELETE | /contact/:contactId | Delete single contact data   |
 
 User API TBD
-| ------ | ------------------- | ---------------------------- |
+| Method  | Address            | Description                  |
+| ------  | ------------------ | ---------------------------- |
 | POST    | /user/register     | Create user                  |
 | POST    | /user/signin       | Login user (send jwt)        |
 | POST    | /user/logout       | Logout user (if sessions)    |
