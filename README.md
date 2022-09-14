@@ -124,5 +124,5 @@ User API TBD
 
 ## Wireframes (intended design - TBD (maybe))
 
-![image](https://user-images.githubusercontent.com/16322250/189774221-1de561b9-44c9-46c6-a3d7-ffe4a4c91813.png)
+![image](https://user-images.githubusercontent.com/16322250/189774221-1de561b9-44c9-46c6-a3d7-ffe4a4c91813.png) </br>
 ![image](https://user-images.githubusercontent.com/16322250/189774240-a68012b3-cdf5-48ac-b9dd-a2afd62dfc19.png)
