@@ -8,27 +8,29 @@
 - Backend: Golang + web-framework serving RESTful API: Gin-gonic
 - Database: MongoDB
 
+
 ## Demo
 
 - Paginated contacts list
-  <video src="https://user-images.githubusercontent.com/16322250/189772771-b10d9059-f86f-4cd9-97c9-c196942eded5.mov" autoplay loop controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189772771-b10d9059-f86f-4cd9-97c9-c196942eded5.mov" controls="controls" style="max-width: 730px;">
   </video>
 
 - Create Contact and Searching for it
-  <video src="https://user-images.githubusercontent.com/16322250/189773217-1dd32541-b68b-4e40-8e96-f5d64685eb99.mov" autoplay loop controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189773217-1dd32541-b68b-4e40-8e96-f5d64685eb99.mov" controls="controls" style="max-width: 730px;">
   </video>
 
 - Search returns multiple matching documents (name or number)
-  <video src="https://user-images.githubusercontent.com/16322250/189773181-7f70d894-069b-4d29-8a8d-7f570567d25b.mov" autoplay loop controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189773181-7f70d894-069b-4d29-8a8d-7f570567d25b.mov" controls="controls" style="max-width: 730px;">
   </video>
 
 - Update Contact
-  <video src="https://user-images.githubusercontent.com/16322250/189773496-9ea7392b-f060-40d0-810c-dc43e257a28a.mov" autoplay loop controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189773496-9ea7392b-f060-40d0-810c-dc43e257a28a.mov" controls="controls" style="max-width: 730px;">
   </video>
 
 - Delete Contact
-  <video src="https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-bdce-fa472b93e785.mov" autoplay loop controls="controls" style="max-width: 730px;">
+  <video src="https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-bdce-fa472b93e785.mov" controls="controls" style="max-width: 730px;">
   </video>
+
 
 ## APIs developed
 
@@ -40,15 +42,28 @@
 | PATCH  | /contact/:contactId | Update single contact data   |
 | DELETE | /contact/:contactId | Delete single contact data   |
 
+User API TBD
+| POST    | /user/register     | Create user                  |
+| POST    | /user/signin       | Login user (send jwt)        |
+| POST    | /user/logout       | Logout user (if sessions)    |
+| GET     | /user/:userId      | Retrieve user details        |
+| GET     | /user              | Retrieve all user deatils    |
+| PATCH   | /user/:userId      | Update user details          |
+| DELETE  | /user/:userId      | Delete user                  |
+| POST    | /token/refresh     | Refresh JWT token            |
+| POST    | /token/blacklist   | Blacklist token (if jwt)     |
+
 ### TBD Swagger Documentation - WIP
+
 
 ## Difficulties Encountered
 
 - Learning Golang was challenging as a SWE bootcamp-er, with no formal training on data structures, how memory works (pointers -- passing by value, passing by reference, structs, BSON v. JSON), it required a bit more thinking to statically type variables, in addition to somewhat unfamiliar syntax. However, it was an excellent learning experience and hope that it will help me become a better software engineer going forwards.
 
-- React --> it took me some adjusting to use JavaScript after spending the last 3 weeks in Python (for leetcode practice.....), but it was overcome relatively quickly compared to Golang since JS is rather "unstructured" compared to latter.
+- React --> It took me some adjusting to use JavaScript after spending the last 3 weeks in Python (for leetcode practice.....), but it was overcome relatively quickly compared to Golang since JS is rather "unstructured" compared to latter.
 
 - HTML/CSS --> Have not had much practise for awhile now, so it took some time to get back into figuring out how to align/center things. I tend to have an overreliance on `display: flex` as i think it fixes all centering problems (provided i know what's happening...), but it seems to serve its purposes so far, when used in conjunction with Grids to create the right layout and even responsive when using breakpoints correctly.
+
 
 ## Things to work on
 
@@ -66,36 +81,33 @@
 - Frontend:
   - BUGS:
     - when searching for a string while on a page that is not 1, the results are not correct as the page retained the previous page number.
-      - to fix by resetting page number to 1 when search is triggered -- however that will require refactoring the code where the state is evalated to the parent component or possibly context/redux
+      - to fix by resetting page number to 1 when search is triggered -- however that will require refactoring the code where the state is elevated to the parent component or possibly context/redux
   - refactor haphazard code (e.g. move repeated code (e.g. fetching data) to services.js)
   - add validation in frontend
   - add login/register page
   - work on CSS, fix alignment issues and add dialogs/modals (instead of coding with window/alerts/confirms)
   - Look into unit testing (?jest)
 
+
 ## Resources
 
 - Gin-gonic cors: https://pkg.go.dev/github.com/gin-contrib/cors#section-readme
 
-- WTF are pointers and how to use them in APIs
-
+- What are pointers and how to use them in APIs
   - https://willnorris.com/2014/05/go-rest-apis-and-pointers/
   - https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back
 
-- WTF is omitempty?
-
+- What is omitempty?
   - https://www.sohamkamani.com/golang/omitempty/
   - https://stackoverflow.com/questions/47158987/how-to-update-mongodb-fields-with-omitempty-flag-in-golang-structure
   - https://www.golang-book.com/books/intro/8
   - https://www.digitalocean.com/community/conceptual_articles/understanding-pointers-in-go
 
 - Pagination resources:
-
   - https://github.com/icza/minquery (kind of inactive)
   - https://github.com/gobeam/mongo-go-pagination (kind of inactive)
 
 - Swagger resources:
-
   - https://santoshk.dev/posts/2022/how-to-integrate-swagger-ui-in-go-backend-gin-edition/
   - https://blog.logrocket.com/documenting-go-web-apis-with-swag/
   - https://github.com/swaggo/swag
@@ -105,6 +117,7 @@
   - GraphQL with Golang: https://dev.to/hackmamba/create-a-graphql-powered-project-management-endpoint-in-golang-and-mongodb-18a
   - Gin gonic GO JWT https://www.youtube.com/watch?v=Cr3BiwGN2Tg&list=PL5dTjWUk_cPY7Q2VTnMbbl8n-H4YDI5wF&index=8
   - Gin-gonic Cloudinary https://dev.to/hackmamba/robust-media-upload-with-golang-and-cloudinary-gin-gonic-version-54ii
+
 
 ## Wireframes (intended design - TBD (maybe))
 
