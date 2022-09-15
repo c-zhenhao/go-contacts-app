@@ -85,6 +85,9 @@ User API TBD
   - BUGS:
     - when searching for a string while on a page that is not 1, the results are not correct as the page retained the previous page number.
       - to fix by resetting page number to 1 when search is triggered -- however that will require refactoring the code where the state is elevated to the parent component or possibly context/redux
+    - Edit page: occasionally, after editing and saving the contact details, the page does not show the updated details.
+      - possibly because the page redirecting (used navigate /view/contactId to redirect) is rendering faster than the the database saves the details, so it retrives the old information. 
+        - to perhaps add in a delay to allow database to update (not sure if there's another more optimal solution)    
   - refactor haphazard code (e.g. move repeated code (e.g. fetching data) to services.js)
   - add validation in frontend
   - add login/register page
