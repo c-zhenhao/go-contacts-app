@@ -8,7 +8,6 @@
 - Backend: Golang + web-framework serving RESTful API: Gin-gonic
 - Database: MongoDB
 
-
 ## Demo
 
 - Paginated contacts list
@@ -31,33 +30,31 @@
   <video src="https://user-images.githubusercontent.com/16322250/189773659-b30de7c5-8485-4d33-bdce-fa472b93e785.mov" controls="controls" style="max-width: 730px;">
   </video>
 
-
 ## APIs developed
 
 Contacts API
-| Method | Address             | Description                  |
+| Method | Address | Description |
 | ------ | ------------------- | ---------------------------- |
-| POST   | /contact            | Create contact               |
-| GET    | /contact/:contactId | Retrieve single contact data |
-| GET    | /contact            | Retrieve all contact data    |
-| PATCH  | /contact/:contactId | Update single contact data   |
-| DELETE | /contact/:contactId | Delete single contact data   |
+| POST | /contact | Create contact |
+| GET | /contact/:contactId | Retrieve single contact data |
+| GET | /contact | Retrieve all contact data |
+| PATCH | /contact/:contactId | Update single contact data |
+| DELETE | /contact/:contactId | Delete single contact data |
 
 User API TBD
-| Method  | Address            | Description                  |
-| ------  | ------------------ | ---------------------------- |
-| POST    | /user/register     | Create user                  |
-| POST    | /user/signin       | Login user (send jwt)        |
-| POST    | /user/logout       | Logout user (if sessions)    |
-| GET     | /user/:userId      | Retrieve user details        |
-| GET     | /user              | Retrieve all user deatils    |
-| PATCH   | /user/:userId      | Update user details          |
-| DELETE  | /user/:userId      | Delete user                  |
-| POST    | /token/refresh     | Refresh JWT token            |
-| POST    | /token/blacklist   | Blacklist token (if jwt)     |
+| Method | Address | Description |
+| ------ | ------------------ | ---------------------------- |
+| POST | /user/register | Create user |
+| POST | /user/signin | Login user (send jwt) |
+| POST | /user/logout | Logout user (if sessions) |
+| GET | /user/:userId | Retrieve user details |
+| GET | /user | Retrieve all user deatils |
+| PATCH | /user/:userId | Update user details |
+| DELETE | /user/:userId | Delete user |
+| POST | /token/refresh | Refresh JWT token |
+| POST | /token/blacklist | Blacklist token (if jwt) |
 
 ### TBD Swagger Documentation - WIP
-
 
 ## Difficulties Encountered
 
@@ -66,7 +63,6 @@ User API TBD
 - React --> It took me some adjusting to use JavaScript after spending the last 3 weeks in Python (for leetcode practice.....), but it was overcome relatively quickly compared to Golang since JS is rather "unstructured" compared to latter.
 
 - HTML/CSS --> Have not had much practise for awhile now, so it took some time to get back into figuring out how to align/center things. I tend to have an overreliance on `display: flex` as i think it fixes all centering problems (provided i know what's happening...), but it seems to serve its purposes so far, when used in conjunction with Grids to create the right layout and even responsive when using breakpoints correctly.
-
 
 ## Things to work on
 
@@ -86,40 +82,48 @@ User API TBD
     - when searching for a string while on a page that is not 1, the results are not correct as the page retained the previous page number.
       - to fix by resetting page number to 1 when search is triggered -- however that will require refactoring the code where the state is elevated to the parent component or possibly context/redux
     - Edit page: occasionally, after editing and saving the contact details, the page does not show the updated details.
-      - possibly because the page redirecting (used navigate /view/contactId to redirect) is rendering faster than the the database saves the details, so it retrives the old information. 
-        - to perhaps add in a delay to allow database to update (not sure if there's another more optimal solution)    
+      - possibly because the page redirecting (used navigate /view/contactId to redirect) is rendering faster than the the database saves the details, so it retrives the old information.
+        - to perhaps add in a delay to allow database to update (not sure if there's another more optimal solution)
   - refactor haphazard code (e.g. move repeated code (e.g. fetching data) to services.js)
   - add validation in frontend
   - add login/register page
   - work on CSS, fix alignment issues and add dialogs/modals (instead of coding with window/alerts/confirms)
   - Look into unit testing (?jest)
 
-
 ## Resources
+
+- learning Golang syntax and features: https://gobyexample.com/
+
+- Go best practices (conventions): https://nimblehq.co/compass/development/code-conventions/golang/
 
 - Gin-gonic cors: https://pkg.go.dev/github.com/gin-contrib/cors#section-readme
 
 - What are pointers and how to use them in APIs
+
   - https://willnorris.com/2014/05/go-rest-apis-and-pointers/
   - https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back
 
 - What is omitempty?
+
   - https://www.sohamkamani.com/golang/omitempty/
   - https://stackoverflow.com/questions/47158987/how-to-update-mongodb-fields-with-omitempty-flag-in-golang-structure
   - https://www.golang-book.com/books/intro/8
   - https://www.digitalocean.com/community/conceptual_articles/understanding-pointers-in-go
 
 - Pagination resources:
+
   - https://github.com/icza/minquery (kind of inactive)
   - https://github.com/gobeam/mongo-go-pagination (kind of inactive)
   - https://www.youtube.com/watch?v=yObwJgoXR7o&t=994s
 
 - Swagger resources to follow:
+
   - https://santoshk.dev/posts/2022/how-to-integrate-swagger-ui-in-go-backend-gin-edition/
   - https://blog.logrocket.com/documenting-go-web-apis-with-swag/
   - https://github.com/swaggo/swag
 
 - Potentially API monitoring stuff to follow (will edit):
+
   - https://www.youtube.com/watch?v=pP2DKCKR4CQ
 
 - More Golang project guides which I intend to follow:
@@ -127,7 +131,6 @@ User API TBD
   - GraphQL with Golang: https://dev.to/hackmamba/create-a-graphql-powered-project-management-endpoint-in-golang-and-mongodb-18a
   - Gin gonic GO JWT https://www.youtube.com/watch?v=Cr3BiwGN2Tg&list=PL5dTjWUk_cPY7Q2VTnMbbl8n-H4YDI5wF&index=8
   - Gin-gonic Cloudinary https://dev.to/hackmamba/robust-media-upload-with-golang-and-cloudinary-gin-gonic-version-54ii
-
 
 ## Wireframes (intended design - TBD (maybe))
 
