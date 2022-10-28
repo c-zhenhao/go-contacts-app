@@ -102,13 +102,13 @@ User API TBD
 
   - https://willnorris.com/2014/05/go-rest-apis-and-pointers/
   - https://dave.cheney.net/2017/04/26/understand-go-pointers-in-less-than-800-words-or-your-money-back
+  - https://www.golang-book.com/books/intro/8
+  - https://www.digitalocean.com/community/conceptual_articles/understanding-pointers-in-go
 
 - What is omitempty?
 
   - https://www.sohamkamani.com/golang/omitempty/
   - https://stackoverflow.com/questions/47158987/how-to-update-mongodb-fields-with-omitempty-flag-in-golang-structure
-  - https://www.golang-book.com/books/intro/8
-  - https://www.digitalocean.com/community/conceptual_articles/understanding-pointers-in-go
 
 - Pagination resources:
 
