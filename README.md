@@ -109,6 +109,7 @@ User API TBD
 
   - https://www.sohamkamani.com/golang/omitempty/
   - https://stackoverflow.com/questions/47158987/how-to-update-mongodb-fields-with-omitempty-flag-in-golang-structure
+  - https://stackoverflow.com/questions/32643815/json-omitempty-with-time-time-field omitempty tag option does not work with time.Time as it is a struct. 
 
 - Pagination resources:
 
